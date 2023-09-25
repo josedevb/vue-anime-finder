@@ -5,17 +5,19 @@ section.hero.is-success
       .container
         .navbar-start
           .navbar-item
-            strong Platzi Anime
+            strong Anime Finder
             
         .navbar-end
           .navbar-item
-            router-link.navbar-item(:to="{ name: 'search' }") Buscar
-            router-link.navbar-item(to="about") Nosotros
+            a.nav-item(@click="selectLang('en')") 🏴󠁧󠁢󠁥󠁮󠁧󠁿
+            a.nav-item(@click="selectLang('es')") 🇪🇸
+            router-link.navbar-item(to="search") {{ $t('search') }}
+            router-link.navbar-item(to="about") {{ $t('about') }}
 
 
   .hero-body
     .container.has-text-centered
-      h1.title Platzi Anime
+      h1.title Anime Finder
       h2.subtitle Anime que estan Vue-nisimos!
       pm-player
 </template>
@@ -26,6 +28,11 @@ import PmPlayer from '@/components/PmPlayer.vue';
 export default {
   components: {
     PmPlayer,
+  },
+  methods: {
+    selectLang(lang) {
+      this.$i18n.locale = lang;
+    },
   },
 };
 </script>

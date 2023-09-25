@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "start": "serve --single"
   },
   "dependencies": {
@@ -13,6 +14,7 @@
     "core-js": "^3.8.3",
     "trae": "^1.4.2",
     "vue": "^2.6.14",
+    "vue-i18n": "^8.26.3",
     "vue-router": "^3.5.3",
     "vuex": "^3.6.2"
   },
@@ -32,6 +34,7 @@
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
+    "vue-cli-plugin-i18n": "~2.3.2",
     "vue-cli-plugin-pug": "~2.0.0",
     "vue-template-compiler": "^2.6.14"
   }
