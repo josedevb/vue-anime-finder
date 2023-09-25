@@ -1,5 +1,8 @@
 # platzi-music
 
+## Live URL
+vue-anime-finder.vercel.app
+
 ## Project setup
 ```
 npm install
